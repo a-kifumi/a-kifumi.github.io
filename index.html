@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akifumi Yoshimura — iOS Apps & Web Tools</title>
-  <meta name="description" content="Indie developer Akifumi Yoshimura. iOS apps (KASANE, SayScan, OnVault, NomadCalc, Book Leaf) and privacy-first web tools (GAZO Hub, JSON Bay, DOGA Hub, VIBE MIX LAB, 判例ひろば, 法事の道具箱, LOFI WINDOW).">
+  <meta name="description" content="Indie developer Akifumi Yoshimura. iOS apps (KASANE, SayScan, OnVault, NomadCalc, Book Leaf) and privacy-first web tools (GAZO Hub, JSON Bay, DOGA Hub, VIBE MIX LAB, LOFI WINDOW, and more).">
   <link rel="canonical" href="https://a-kifumi.github.io/">
+  <link rel="alternate" hreflang="en" href="https://a-kifumi.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://a-kifumi.github.io/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://a-kifumi.github.io/">
   <meta name="author" content="Akifumi Yoshimura">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
@@ -41,6 +44,11 @@
       color: var(--accent); text-decoration: none; font-size: 0.95rem; margin-right: 18px;
     }
     .socials a:hover { text-decoration: underline; }
+    .langbar { margin-bottom: 28px; font-size: 0.9rem; }
+    .langbar a { color: var(--accent); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar .current { color: var(--muted); }
+    .langbar .sep { color: var(--border); margin: 0 8px; }
     section { margin-bottom: 56px; }
     section > h2 {
       font-size: 1.3rem; margin: 0 0 6px; letter-spacing: -0.01em;
@@ -118,6 +126,9 @@
 </head>
 <body>
   <div class="wrap">
+    <nav class="langbar" aria-label="Language">
+      <span class="current">English</span><span class="sep">·</span><a href="/ja/" hreflang="ja">日本語</a>
+    </nav>
     <header class="hero">
       <h1>Akifumi Yoshimura</h1>
       <p class="lead">Indie developer building focused iOS apps and privacy-first web tools. Below are the products I design, build, and maintain.</p>
@@ -193,28 +204,28 @@
 
         <article class="card">
           <span class="tag">Image Tools</span>
-          <h3><a href="https://mjo.app/" target="_blank" rel="noopener">GAZO Hub — 画像編集ツール</a></h3>
-          <p class="desc">プライバシー重視のオールインワン画像編集ツール。圧縮・変換・トリミング・背景削除などをブラウザ内で完結。</p>
+          <h3><a href="https://mjo.app/" target="_blank" rel="noopener">GAZO Hub — Image Editing Tools</a></h3>
+          <p class="desc">Privacy-first, all-in-one image editing tools. Compress, convert, crop, and remove backgrounds — entirely in your browser.</p>
           <div class="links">
-            <a class="primary" href="https://mjo.app/" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://mjo.app/" target="_blank" rel="noopener">Open site</a>
           </div>
         </article>
 
         <article class="card">
           <span class="tag">Developer Tools</span>
-          <h3><a href="https://jso.app/ja" target="_blank" rel="noopener">JSON Bay — JSON編集ツール</a></h3>
-          <p class="desc">フォーマット・バリデーション・CSV/YAML/XLSX変換まで。JSON作業に必要な機能をまとめたオールインワンツール。</p>
+          <h3><a href="https://jso.app/" target="_blank" rel="noopener">JSON Bay — JSON Toolkit</a></h3>
+          <p class="desc">All-in-one JSON toolkit. Format, validate, and convert from CSV / YAML / XLSX — everything you need for working with JSON.</p>
           <div class="links">
-            <a class="primary" href="https://jso.app/ja" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://jso.app/" target="_blank" rel="noopener">Open site</a>
           </div>
         </article>
 
         <article class="card">
           <span class="tag">Video Tools</span>
-          <h3><a href="https://doga.jso.app/" target="_blank" rel="noopener">DOGA Hub — 動画加工ツール</a></h3>
-          <p class="desc">形式変換・カット・圧縮などの動画加工をブラウザだけで完結。ローカル処理でファイルを外部送信しません。</p>
+          <h3><a href="https://doga.jso.app/" target="_blank" rel="noopener">DOGA Hub — Video Toolkit</a></h3>
+          <p class="desc">All-in-one video toolkit. Convert, cut, and compress video right in your browser. Local processing — files never leave your device.</p>
           <div class="links">
-            <a class="primary" href="https://doga.jso.app/" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://doga.jso.app/" target="_blank" rel="noopener">Open site</a>
           </div>
         </article>
 
@@ -238,28 +249,28 @@
 
         <article class="card">
           <span class="tag">Legal</span>
-          <h3><a href="https://hanrei-hiroba.com/" target="_blank" rel="noopener">判例ひろば — 判例データベース</a></h3>
-          <p class="desc">「あのトラブル」の結末を3分で理解する判例DB。争点・転機・学びをわかりやすくまとめた判例データベース。</p>
+          <h3><a href="https://hanrei-hiroba.com/" target="_blank" rel="noopener" hreflang="ja">Hanrei Hiroba — Case-Law Database</a></h3>
+          <p class="desc">A Japanese case-law database that helps you grasp court rulings in three minutes — key issues, turning points, and takeaways. (Japanese)</p>
           <div class="links">
-            <a class="primary" href="https://hanrei-hiroba.com/" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://hanrei-hiroba.com/" target="_blank" rel="noopener" hreflang="ja">Open site</a>
           </div>
         </article>
 
         <article class="card">
           <span class="tag">Utility</span>
-          <h3><a href="https://houji-tool.mjo.app/" target="_blank" rel="noopener">法事の道具箱 — 法事ツール</a></h3>
-          <p class="desc">回忌・案内・RSVP・進行表を一元管理。忌日表/霊祭日の自動計算に対応し、PDF / ICS / CSV で出力できます。</p>
+          <h3><a href="https://houji-tool.mjo.app/" target="_blank" rel="noopener" hreflang="ja">Houji Toolbox — Memorial Service Planner</a></h3>
+          <p class="desc">A toolbox for Japanese Buddhist memorial services. Manage memorial dates, invitations, RSVPs, and schedules; export to PDF / ICS / CSV. (Japanese)</p>
           <div class="links">
-            <a class="primary" href="https://houji-tool.mjo.app/" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://houji-tool.mjo.app/" target="_blank" rel="noopener" hreflang="ja">Open site</a>
           </div>
         </article>
 
         <article class="card">
-          <span class="tag">Web App</span>
-          <h3><a href="https://osake.work/" target="_blank" rel="noopener">くら旅</a></h3>
-          <p class="desc">醸造所を中心に旅をするきっかけになるWebサイト</p>
+          <span class="tag">Travel</span>
+          <h3><a href="https://osake.work/" target="_blank" rel="noopener">Kura Tabi</a></h3>
+          <p class="desc">A web app that sparks trips centered around Japanese sake breweries.</p>
           <div class="links">
-            <a class="primary" href="https://osake.work/" target="_blank" rel="noopener">サイトを開く</a>
+            <a class="primary" href="https://osake.work/" target="_blank" rel="noopener">Open site</a>
           </div>
         </article>
 
