@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吉村明史 — iOSアプリ & Webツール</title>
+  <meta name="description" content="個人開発者・吉村明史のポートフォリオ。iOSアプリ（KASANE / SayScan / OnVault / NomadCalc / Book Leaf）と、プライバシー重視のWebツール（GAZO Hub / JSON Bay / DOGA Hub / VIBE MIX LAB / LOFI WINDOW / 判例ひろば / 法事の道具箱 / くら旅）。">
+  <link rel="canonical" href="https://a-kifumi.github.io/ja/">
+  <link rel="alternate" hreflang="en" href="https://a-kifumi.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://a-kifumi.github.io/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://a-kifumi.github.io/">
+  <meta name="author" content="吉村明史">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="吉村明史 — iOSアプリ & Webツール">
+  <meta property="og:description" content="個人開発者・吉村明史が作るiOSアプリとプライバシー重視のWebツール。">
+  <meta property="og:url" content="https://a-kifumi.github.io/ja/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@akifumiweb">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #181b22;
+      --surface-2: #1f232c;
+      --text: #e8eaed;
+      --muted: #9aa3b0;
+      --accent: #6ea8fe;
+      --border: #2a2f3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 64px 20px 80px; }
+    header.hero { margin-bottom: 56px; }
+    .hero h1 { font-size: 2.2rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+    .hero p.lead { font-size: 1.05rem; color: var(--muted); margin: 0 0 20px; max-width: 660px; }
+    .socials a {
+      color: var(--accent); text-decoration: none; font-size: 0.95rem; margin-right: 18px;
+    }
+    .socials a:hover { text-decoration: underline; }
+    .langbar { margin-bottom: 28px; font-size: 0.9rem; }
+    .langbar a { color: var(--accent); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar .current { color: var(--muted); }
+    .langbar .sep { color: var(--border); margin: 0 8px; }
+    section { margin-bottom: 56px; }
+    section > h2 {
+      font-size: 1.3rem; margin: 0 0 6px; letter-spacing: -0.01em;
+    }
+    section > p.section-sub { color: var(--muted); margin: 0 0 24px; font-size: 0.95rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: var(--accent); background: var(--surface-2); }
+    .card .tag {
+      display: inline-block; font-size: 0.74rem; letter-spacing: 0.04em;
+      color: var(--muted); background: var(--surface-2); border: 1px solid var(--border);
+      padding: 3px 10px; border-radius: 999px; align-self: flex-start; margin-bottom: 14px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.12rem; }
+    .card h3 a { color: var(--text); text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .card p.desc { color: var(--muted); margin: 0 0 18px; font-size: 0.92rem; flex-grow: 1; }
+    .card .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .card .links a {
+      font-size: 0.86rem; text-decoration: none; color: var(--accent);
+      border: 1px solid var(--border); padding: 7px 13px; border-radius: 9px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .card .links a:hover { background: var(--surface-2); border-color: var(--accent); }
+    .card .links a.primary { background: var(--accent); color: #0f1115; border-color: var(--accent); font-weight: 600; }
+    .card .links a.primary:hover { opacity: 0.9; }
+    footer {
+      margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.88rem;
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 40px 16px 56px; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "吉村明史",
+    "alternateName": "Akifumi Yoshimura",
+    "url": "https://a-kifumi.github.io/ja/",
+    "jobTitle": "個人開発者（アプリ・Web）",
+    "sameAs": [
+      "https://apps.apple.com/us/developer/akifumi-yoshimura/id1819749795",
+      "https://x.com/akifumiweb",
+      "https://github.com/a-kifumi",
+      "https://kasane-lp.akifumi.workers.dev/",
+      "https://sayscan.mjo.app/",
+      "https://onvault.mjo.app/",
+      "https://nomad-calc.mjo.app/",
+      "https://bookleaf.mjo.app/",
+      "https://mjo.app/",
+      "https://jso.app/",
+      "https://doga.jso.app/",
+      "https://vibe-mix.jso.app/",
+      "https://lofi-window.jso.app/",
+      "https://hanrei-hiroba.com/",
+      "https://houji-tool.mjo.app/",
+      "https://osake.work/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="langbar" aria-label="Language">
+      <a href="/" hreflang="en">English</a><span class="sep">·</span><span class="current">日本語</span>
+    </nav>
+    <header class="hero">
+      <h1>吉村明史</h1>
+      <p class="lead">シンプルで役立つiOSアプリと、プライバシー重視のWebツールを個人で作っています。以下は自分で企画・開発・運営しているプロダクトです。</p>
+      <nav class="socials">
+        <a href="https://apps.apple.com/us/developer/akifumi-yoshimura/id1819749795" target="_blank" rel="noopener">App Store</a>
+        <a href="https://x.com/akifumiweb" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://github.com/a-kifumi" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="ios-apps">
+      <h2 id="ios-apps">iOSアプリ</h2>
+      <p class="section-sub">iPhone・iPad・Mac・Apple Vision に対応したネイティブアプリ。</p>
+      <div class="grid">
+
+        <article class="card">
+          <span class="tag">生産性</span>
+          <h3><a href="https://kasane-lp.akifumi.workers.dev/" target="_blank" rel="noopener">KASANE — 習慣マルチタイマー</a></h3>
+          <p class="desc">決まった時間に縛られずに習慣をつくる。日々のルーティンを重ねて管理できる柔軟なマルチタイマー。</p>
+          <div class="links">
+            <a class="primary" href="https://kasane-lp.akifumi.workers.dev/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://apps.apple.com/us/app/kasane-habit-multi-timer/id6772861577" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">旅行</span>
+          <h3><a href="https://sayscan.mjo.app/" target="_blank" rel="noopener">SayScan — 翻訳 & 発音</a></h3>
+          <p class="desc">旅先で使えるAIカメラスキャナー。文字を翻訳し、正しい発音も学べます。</p>
+          <div class="links">
+            <a class="primary" href="https://sayscan.mjo.app/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://apps.apple.com/us/app/sayscan-translate-pronounce/id6747715474" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">生産性</span>
+          <h3><a href="https://onvault.mjo.app/" target="_blank" rel="noopener">OnVault — オフラインOCR & 検索</a></h3>
+          <p class="desc">機密文書も安心の完全オフラインOCR。クラウドを使わずにスキャン・保存・検索ができます。</p>
+          <div class="links">
+            <a class="primary" href="https://onvault.mjo.app/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://apps.apple.com/us/app/onvault-offline-ocr-search/id6759666838" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">旅行</span>
+          <h3><a href="https://nomad-calc.mjo.app/" target="_blank" rel="noopener">NomadCalc — 通貨換算</a></h3>
+          <p class="desc">支払う前にレートを確認。旅行者やノマド向けに作られた高速な通貨換算ツール。</p>
+          <div class="links">
+            <a class="primary" href="https://nomad-calc.mjo.app/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://apps.apple.com/us/app/nomadcalc-currency-converter/id6758569780" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">読書</span>
+          <h3><a href="https://bookleaf.mjo.app/" target="_blank" rel="noopener">Book Leaf — OCR読書ノート</a></h3>
+          <p class="desc">紙の本のページを検索可能に。印刷された本からノートを取り込み、OCRで整理できます。</p>
+          <div class="links">
+            <a class="primary" href="https://bookleaf.mjo.app/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://apps.apple.com/us/app/book-leaf-ocr-book-notes/id6747080786" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section aria-labelledby="web-tools">
+      <h2 id="web-tools">Webアプリ & ツール</h2>
+      <p class="section-sub">ブラウザで動くツール。多くはプライバシー重視で処理がすべて手元で完結します。</p>
+      <div class="grid">
+
+        <article class="card">
+          <span class="tag">画像ツール</span>
+          <h3><a href="https://mjo.app/" target="_blank" rel="noopener">GAZO Hub — 画像編集ツール</a></h3>
+          <p class="desc">プライバシー重視のオールインワン画像編集ツール。圧縮・変換・トリミング・背景削除などをブラウザ内で完結。</p>
+          <div class="links">
+            <a class="primary" href="https://mjo.app/" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">開発ツール</span>
+          <h3><a href="https://jso.app/ja" target="_blank" rel="noopener">JSON Bay — JSON編集ツール</a></h3>
+          <p class="desc">フォーマット・バリデーション・CSV/YAML/XLSX変換まで。JSON作業に必要な機能をまとめたオールインワンツール。</p>
+          <div class="links">
+            <a class="primary" href="https://jso.app/ja" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">動画ツール</span>
+          <h3><a href="https://doga.jso.app/" target="_blank" rel="noopener">DOGA Hub — 動画加工ツール</a></h3>
+          <p class="desc">形式変換・カット・圧縮などの動画加工をブラウザだけで完結。ローカル処理でファイルを外部送信しません。</p>
+          <div class="links">
+            <a class="primary" href="https://doga.jso.app/" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">音楽 / オーディオ</span>
+          <h3><a href="https://vibe-mix.jso.app/" target="_blank" rel="noopener">VIBE MIX LAB — Auto DJ ミックス</a></h3>
+          <p class="desc">トラックをアップするだけでAuto DJミックスが完成。BPM同期・ハーモニックミキシング・精密なトランジションに対応。</p>
+          <div class="links">
+            <a class="primary" href="https://vibe-mix.jso.app/" target="_blank" rel="noopener">アプリを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">集中 / リラックス</span>
+          <h3><a href="https://lofi-window.jso.app/" target="_blank" rel="noopener">LOFI WINDOW — 世界のライブカメラ</a></h3>
+          <p class="desc">世界各地のライブシティカメラをLo-fi音楽とともに。集中・勉強・リラックスのためのWebアプリ。</p>
+          <div class="links">
+            <a class="primary" href="https://lofi-window.jso.app/" target="_blank" rel="noopener">アプリを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">法律</span>
+          <h3><a href="https://hanrei-hiroba.com/" target="_blank" rel="noopener">判例ひろば — 判例データベース</a></h3>
+          <p class="desc">「あのトラブル」の結末を3分で理解する判例DB。争点・転機・学びをわかりやすくまとめた判例データベース。</p>
+          <div class="links">
+            <a class="primary" href="https://hanrei-hiroba.com/" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">ユーティリティ</span>
+          <h3><a href="https://houji-tool.mjo.app/" target="_blank" rel="noopener">法事の道具箱 — 法事ツール</a></h3>
+          <p class="desc">回忌・案内・RSVP・進行表を一元管理。忌日表/霊祭日の自動計算に対応し、PDF / ICS / CSV で出力できます。</p>
+          <div class="links">
+            <a class="primary" href="https://houji-tool.mjo.app/" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">旅行</span>
+          <h3><a href="https://osake.work/" target="_blank" rel="noopener">くら旅</a></h3>
+          <p class="desc">醸造所を中心に旅をするきっかけになるWebサイト。</p>
+          <div class="links">
+            <a class="primary" href="https://osake.work/" target="_blank" rel="noopener">サイトを開く</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 吉村明史. すべてのプロダクトは個人で開発・運営しています。</p>
+    </footer>
+  </div>
+</body>
+</html>
