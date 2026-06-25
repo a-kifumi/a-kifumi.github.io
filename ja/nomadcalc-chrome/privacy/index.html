@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — NomadCalc Chrome 拡張機能</title>
+  <meta name="description" content="NomadCalc Chrome 拡張機能のプライバシーポリシー。収集するデータ、利用目的、ユーザーの選択肢について説明します。">
+  <link rel="canonical" href="https://a-kifumi.github.io/ja/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="en" href="https://a-kifumi.github.io/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="ja" href="https://a-kifumi.github.io/ja/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://a-kifumi.github.io/nomadcalc-chrome/privacy/">
+  <meta name="author" content="akifumi">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #181b22;
+      --text: #e8eaed;
+      --muted: #9aa3b0;
+      --accent: #6ea8fe;
+      --border: #2a2f3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 72px; }
+    .langbar { margin-bottom: 24px; font-size: 0.9rem; }
+    .langbar a { color: var(--accent); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar .current { color: var(--muted); }
+    .langbar .sep { color: var(--border); margin: 0 8px; }
+    .back { margin-bottom: 28px; font-size: 0.9rem; }
+    .back a { color: var(--accent); text-decoration: none; }
+    .back a:hover { text-decoration: underline; }
+    h1 { font-size: 1.75rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+    .updated { color: var(--muted); font-size: 0.92rem; margin: 0 0 32px; }
+    h2 { font-size: 1.12rem; margin: 36px 0 12px; }
+    h3 { font-size: 1rem; margin: 24px 0 8px; color: var(--text); }
+    p, li { font-size: 0.96rem; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 1.4rem; }
+    li { margin-bottom: 8px; color: var(--muted); }
+    li strong { color: var(--text); }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="langbar" aria-label="Language">
+      <a href="/nomadcalc-chrome/privacy/" hreflang="en">English</a><span class="sep">·</span><span class="current">日本語</span>
+    </nav>
+    <p class="back"><a href="/ja/">← ポートフォリオに戻る</a></p>
+
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">NomadCalc Chrome 拡張機能 · 最終更新: 2026年6月25日</p>
+
+    <p>
+      本プライバシーポリシーは、akifumi（吉村 明史）が開発する Chrome 拡張機能
+      <strong>NomadCalc</strong> が、利用時にどのような情報を扱うかを説明するものです。
+      NomadCalc は、ページ上で選択した価格に手数料・税・送料・カード手数料などを加味し、
+      実際に支払う金額の目安を確認するためのツールです。
+    </p>
+
+    <h2>概要</h2>
+    <ul>
+      <li><strong>アカウント不要。</strong> 拡張機能内でログインは求めず、氏名やメールアドレスを収集しません。</li>
+      <li><strong>閲覧の監視はしません。</strong> URL、ページ本文、Cookie、フォーム入力、閲覧履歴をバックグラウンドで読み取りません。</li>
+      <li><strong>選択テキストは明示的操作時のみ。</strong> 右クリックメニュー、キーボードショートカット、またはユーザーが開始したポップアップ／サイドパネルの操作時に限り、選択中のテキストを読み取ります。</li>
+      <li><strong>ローカル優先の保存。</strong> 設定、レートキャッシュ、換算履歴は Chrome のストレージ API を使い、端末内に保存されます。</li>
+      <li><strong>広告・第三者分析なし。</strong> 広告 SDK は使用せず、データを販売しません。</li>
+    </ul>
+
+    <h2>拡張機能が処理する情報</h2>
+
+    <h3>選択したテキスト</h3>
+    <p>
+      換算を実行すると、アクティブなタブでユーザーが選択したテキスト（価格など）を読み取ります。
+      サイトによって通貨記号と金額が別要素に分かれている場合、DOM 上の近傍から通貨記号を補完することがあります。
+      選択テキストは通貨と金額の解析にのみ使われ、ページ全体のスナップショットとして収集・送信されることはありません。
+    </p>
+
+    <h3>設定と換算履歴</h3>
+    <p>端末内（Chrome ストレージ）に保存されるデータの例:</p>
+    <ul>
+      <li>換算先通貨、言語、手数料・税・送料などの設定</li>
+      <li>為替レートのキャッシュと取得時刻</li>
+      <li>直近の換算履歴（最大50件：金額と通貨コード）</li>
+      <li>オンボーディングの選択内容、サイトごとの選択オーバーレイの有効化状態</li>
+      <li>初回換算成功時刻やモバイルアプリ案内のクリック時刻など、端末内のみの製品指標</li>
+    </ul>
+    <p>
+      拡張機能を削除するか、<code>chrome://extensions</code> から拡張機能のデータを消去することで、
+      これらの情報を削除できます。
+    </p>
+
+    <h3>位置情報（任意）</h3>
+    <p>
+      位置情報の利用は任意です。許可した場合、現在地から現地通貨や近隣国の候補を提案します。
+      座標から国コードへの変換は端末上の組み込みルックアップで行います。
+      Nearby 機能利用時は、国コード・通貨コード・座標が Chrome ストレージにローカル保存される場合があります。
+      位置情報は当方のサーバーには送信されません。
+    </p>
+
+    <h3>為替レート API</h3>
+    <p>
+      最新レート取得のため、バックグラウンドの Service Worker から読み取り専用 API
+      （<a href="https://nomadcalc-fx-rate-api.akifumi.workers.dev/" target="_blank" rel="noopener">nomadcalc-fx-rate-api.akifumi.workers.dev</a>）
+      へリクエストを送ります。公開のレート表の取得のみで、選択した価格・閲覧履歴・個人を特定する情報は含まれません。
+    </p>
+
+    <h2>任意のサイトアクセス（選択オーバーレイ）</h2>
+    <p>
+      初期設定時に全サイトへのアクセスを要求しません。ポップアップから特定サイトで選択オーバーレイを有効にした場合のみ、
+      そのサイト向けの任意ホスト権限を求めることがあります。許可するサイトは Chrome の拡張機能権限 UI で管理できます。
+    </p>
+
+    <h2>権限と利用目的</h2>
+    <ul>
+      <li><strong>storage</strong> — 設定、レートキャッシュ、換算履歴を端末に保存</li>
+      <li><strong>contextMenus</strong> — 右クリックで選択価格を換算</li>
+      <li><strong>sidePanel</strong> — 詳細換算、手数料、履歴の表示</li>
+      <li><strong>activeTab</strong> — ユーザー操作後に限り、選択テキストを読み取り</li>
+      <li><strong>scripting</strong> — ショートカット実行時に選択読み取り用の小さなスクリプトを注入</li>
+      <li><strong>offscreen</strong> — 任意の現地通貨検出のため、MV3 オフスクリーンドキュメントで位置情報を取得</li>
+      <li><strong>FX API ホスト権限</strong> — 読み取り専用の為替レート取得</li>
+      <li><strong>任意ホスト権限</strong> — ユーザーが有効化したサイトでのみオーバーレイ表示</li>
+    </ul>
+
+    <h2>行わないこと</h2>
+    <ul>
+      <li>許可したサイトを除き、閲覧中ページの改変は行いません（オーバーレイ UI の表示を除く）。</li>
+      <li>個人情報の販売・貸与・取引は行いません。</li>
+      <li>広告プロファイルの構築に拡張機能を利用しません。</li>
+      <li>13歳未満から故意に情報を収集しません。</li>
+    </ul>
+
+    <h2>データの保持</h2>
+    <p>
+      ローカルに保存されたデータは、拡張機能のストレージを消去するかアンインストールするまで端末に残ります。
+      サーバー側の FX API に関するログ（存在する場合）も、公開レート配信に必要な運用データに限られ、
+      ユーザーの選択内容や閲覧行動は含まれません。
+    </p>
+
+    <h2>ポリシーの変更</h2>
+    <p>
+      拡張機能の変更に伴い、本ポリシーを更新することがあります。ページ上部の「最終更新」日付が最新版を示します。
+      更新後も拡張機能を利用し続ける場合、改定後のポリシーに同意したものとみなします。
+    </p>
+
+    <h2>お問い合わせ</h2>
+    <p>
+      開発者: akifumi（吉村 明史）<br>
+      本ポリシーまたは NomadCalc に関するお問い合わせ:
+      <a href="https://x.com/akifumiweb" target="_blank" rel="noopener">X（@akifumiweb）</a>
+      または
+      <a href="https://github.com/a-kifumi" target="_blank" rel="noopener">GitHub</a>。
+    </p>
+
+    <footer>
+      <p>&copy; 2026 akifumi · <a href="https://nomad-calc.mjo.app/" target="_blank" rel="noopener">NomadCalc 公式サイト</a></p>
+    </footer>
+  </div>
+</body>
+</html>

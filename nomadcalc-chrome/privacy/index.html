@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — NomadCalc Chrome Extension</title>
+  <meta name="description" content="Privacy policy for the NomadCalc Chrome extension. Learn what data is collected, how it is used, and your choices.">
+  <link rel="canonical" href="https://a-kifumi.github.io/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="en" href="https://a-kifumi.github.io/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="ja" href="https://a-kifumi.github.io/ja/nomadcalc-chrome/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://a-kifumi.github.io/nomadcalc-chrome/privacy/">
+  <meta name="author" content="Akifumi Yoshimura">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #181b22;
+      --text: #e8eaed;
+      --muted: #9aa3b0;
+      --accent: #6ea8fe;
+      --border: #2a2f3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 72px; }
+    .langbar { margin-bottom: 24px; font-size: 0.9rem; }
+    .langbar a { color: var(--accent); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar .current { color: var(--muted); }
+    .langbar .sep { color: var(--border); margin: 0 8px; }
+    .back { margin-bottom: 28px; font-size: 0.9rem; }
+    .back a { color: var(--accent); text-decoration: none; }
+    .back a:hover { text-decoration: underline; }
+    h1 { font-size: 1.85rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .updated { color: var(--muted); font-size: 0.92rem; margin: 0 0 32px; }
+    h2 { font-size: 1.15rem; margin: 36px 0 12px; }
+    p, li { color: var(--text); font-size: 0.96rem; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 1.4rem; }
+    li { margin-bottom: 8px; color: var(--muted); }
+    li strong { color: var(--text); }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="langbar" aria-label="Language">
+      <span class="current">English</span><span class="sep">·</span><a href="/ja/nomadcalc-chrome/privacy/" hreflang="ja">日本語</a>
+    </nav>
+    <p class="back"><a href="/">← Back to portfolio</a></p>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">NomadCalc Chrome Extension · Last updated: June 25, 2026</p>
+
+    <p>
+      This Privacy Policy describes how <strong>NomadCalc</strong> (the Chrome extension developed by
+      Akifumi Yoshimura) handles information when you use the extension. NomadCalc helps you estimate
+      what you will actually pay for a price you select on a page, including optional fees, tax,
+      shipping, and card charges.
+    </p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>No accounts.</strong> You do not sign in, and we do not collect your name or email through the extension.</li>
+      <li><strong>No browsing surveillance.</strong> NomadCalc does not read URLs, page content, cookies, form inputs, or browsing history in the background.</li>
+      <li><strong>Selection only on your action.</strong> Text is read only when you explicitly trigger a conversion (right-click menu, keyboard shortcut, or popup/side panel flow you start).</li>
+      <li><strong>Local-first storage.</strong> Settings, rate cache, and conversion history stay on your device using Chrome’s storage APIs.</li>
+      <li><strong>No ads or third-party analytics.</strong> We do not use advertising SDKs or sell your data.</li>
+    </ul>
+
+    <h2>Information the extension processes</h2>
+
+    <h3>Text you select</h3>
+    <p>
+      When you trigger a conversion, NomadCalc reads the text you have selected on the active tab
+      (for example, a price). It may enrich the selection with a nearby currency symbol from the page
+      DOM when a site splits the symbol and amount into separate elements. Selected text is processed
+      to detect currency and amount. It is not uploaded as page content, and we do not collect full
+      page snapshots.
+    </p>
+
+    <h3>Settings and conversion history</h3>
+    <p>
+      The extension stores data locally on your device, including:
+    </p>
+    <ul>
+      <li>Your preferred target currency, locale, and fee/tax/shipping settings</li>
+      <li>Cached exchange-rate data and timestamps</li>
+      <li>Up to 50 recent conversion entries (amounts and currency codes you converted)</li>
+      <li>Onboarding choices and optional feature flags (for example, whether the selection overlay is enabled on a site)</li>
+      <li>Local-only product metrics such as the time of your first successful conversion or a mobile app promo click — stored on device only, not transmitted to us</li>
+    </ul>
+    <p>
+      You can clear this data by removing the extension or clearing extension data in
+      <code>chrome://extensions</code>.
+    </p>
+
+    <h3>Location (optional)</h3>
+    <p>
+      Location is optional. If you allow it, NomadCalc uses your device’s geolocation to suggest a
+      local currency and nearby countries. Coordinates are resolved to a country code on your device
+      (using a built-in country lookup). For the Nearby feature, country code, currency code, and
+      coordinates may be saved locally in Chrome storage. Location data is not sent to our servers.
+    </p>
+
+    <h3>Exchange-rate API</h3>
+    <p>
+      To fetch current exchange rates, the extension’s background service worker sends read-only
+      requests to our FX rate API at
+      <a href="https://nomadcalc-fx-rate-api.akifumi.workers.dev/" target="_blank" rel="noopener">nomadcalc-fx-rate-api.akifumi.workers.dev</a>.
+      These requests retrieve public rate tables only. They do not include your selected prices,
+      browsing history, or personal identifiers.
+    </p>
+
+    <h2>Optional site access (selection overlay)</h2>
+    <p>
+      NomadCalc does not request access to all websites during setup. If you enable the selection
+      overlay on a site from the popup, you may grant optional host permission for that site so a
+      small overlay can appear when you select a price. You control which sites receive this
+      permission through Chrome’s extension permission UI.
+    </p>
+
+    <h2>Permissions and why they are used</h2>
+    <ul>
+      <li><strong>storage</strong> — Save settings, rate cache, and conversion history on your device</li>
+      <li><strong>contextMenus</strong> — Convert a price you selected via right-click</li>
+      <li><strong>sidePanel</strong> — Show detailed conversion, fees, and history</li>
+      <li><strong>activeTab</strong> — Read the current tab’s text selection only after you take action</li>
+      <li><strong>scripting</strong> — Inject a small helper to read the selection on keyboard shortcut</li>
+      <li><strong>offscreen</strong> — Request geolocation from an MV3 offscreen document for optional local currency detection</li>
+      <li><strong>Host permission (FX API)</strong> — Fetch read-only exchange rates</li>
+      <li><strong>Optional host permissions</strong> — Show the selection overlay only on sites where you enable it</li>
+    </ul>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not modify the pages you visit (except injecting the optional overlay UI on sites you allow).</li>
+      <li>We do not sell, rent, or trade your personal information.</li>
+      <li>We do not use the extension to build advertising profiles.</li>
+      <li>We do not knowingly collect information from children under 13.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>
+      Data stored locally remains on your device until you clear extension storage or uninstall
+      NomadCalc. Server-side FX rate logs, if any, are limited to operational data needed to serve
+      public rate endpoints and do not include your selections or browsing activity.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy when the extension changes. The “Last updated” date at the top
+      will reflect the latest version. Continued use of the extension after an update means you accept
+      the revised policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Developer: Akifumi Yoshimura<br>
+      Questions about this policy or NomadCalc:
+      <a href="https://x.com/akifumiweb" target="_blank" rel="noopener">@akifumiweb on X</a>
+      or
+      <a href="https://github.com/a-kifumi" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+
+    <footer>
+      <p>&copy; 2026 Akifumi Yoshimura · <a href="https://nomad-calc.mjo.app/" target="_blank" rel="noopener">NomadCalc website</a></p>
+    </footer>
+  </div>
+</body>
+</html>
