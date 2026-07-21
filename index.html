@@ -31,7 +31,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      background: var(--bg);
+      background: transparent;
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -96,6 +96,7 @@
       .hero h1 { font-size: 1.9rem; }
     }
   </style>
+  <link rel="stylesheet" href="/css/kinetic-grid.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -131,6 +132,7 @@
   </script>
 </head>
 <body>
+  <div id="kinetic-grid"></div>
   <div class="wrap">
     <nav class="langbar" aria-label="Language">
       <span class="current">English</span><span class="sep">·</span><a href="/ja/" hreflang="ja">日本語</a>
@@ -343,5 +345,6 @@
       <p>&copy; 2026 Akifumi Yoshimura. All products built and maintained independently.</p>
     </footer>
   </div>
+  <script src="/js/kinetic-grid.js" defer></script>
 </body>
 </html>
